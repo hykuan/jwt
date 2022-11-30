@@ -126,7 +126,7 @@ func (u *UserClaims) Validate(vr *ValidationResults) {
 
 // ExpectedPrefixes defines the types that can encode a user JWT, account
 func (u *UserClaims) ExpectedPrefixes() []nkeys.PrefixByte {
-	return []nkeys.PrefixByte{nkeys.PrefixByteAccount}
+	return []nkeys.PrefixByte{nkeys.PrefixByteAccount, nkeys.PrefixByteUser}
 }
 
 // Claims returns the generic data from a user jwt
